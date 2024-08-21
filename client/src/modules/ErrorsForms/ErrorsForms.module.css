@@ -1,0 +1,44 @@
+.errors-container {
+  padding: 0.6rem;
+  background-color: rgba(255, 200, 200, 0.837);
+  list-style-position: inside;
+  border-radius: 15px;
+  border: 1.5px solid red;
+  margin-bottom: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.errors-container ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.error-message-container {
+  color: red;
+  padding: 0.6rem;
+  background-color: rgba(255, 200, 200, 0.837);
+  list-style-position: inside;
+  border-radius: 15px;
+  border: 1.5px solid red;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  font-size: 10px;
+  text-align: center;
+  margin: 0;
+}
+
+.error-message-container > span {
+  text-decoration: underline;
+}

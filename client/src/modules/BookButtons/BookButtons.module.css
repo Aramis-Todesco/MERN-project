@@ -1,0 +1,66 @@
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.button-wrapper::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  border-bottom: 2px dotted black;
+  position: absolute;
+  top: -1rem;
+}
+
+/* Stile base per entrambi i bottoni */
+.delete-btn,
+.update-btn {
+  width: 50%;
+  padding: 1rem;
+  font-size: 2rem;
+  transition: background-color 0.7s, color 0.7s;
+  border: 1px solid transparent;
+}
+
+/* Stato normale */
+.delete-btn {
+  color: #f7f7f7;
+  background-color: #e27d60;
+  border-radius: 0;
+}
+
+.update-btn {
+  color: #e27d60;
+  background-color: #f7f7f7;
+  border: 1px solid #e27d60;
+}
+
+/* Hover sull'intero contenitore */
+.button-wrapper:hover .delete-btn {
+  color: #e27d60;
+  background-color: #f7f7f7;
+  border: 1px solid #e27d60;
+}
+
+.button-wrapper:hover .update-btn {
+  color: #f7f7f7;
+  background-color: #e27d60;
+  border: 1px solid #f7f7f7;
+}
+
+@media (min-width: 430px) {
+  .update-btn,
+  .delete-btn {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 990px) {
+  .update-btn,
+  .delete-btn {
+    font-size: 1.7em;
+  }
+}

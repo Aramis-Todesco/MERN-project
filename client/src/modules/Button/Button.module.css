@@ -1,0 +1,25 @@
+.button {
+  background-color: var(--light-orange);
+  border: 1px solid var(--light-gray);
+  border-radius: 20px;
+  color: var(--light-gray);
+  padding: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 0.7s;
+  font-family: "Montserrat", sans-serif;
+  margin-block: 1rem;
+}
+
+.button:hover {
+  background-color: var(--light-gray);
+  border: 1px solid var(--light-orange);
+  color: var(--light-orange);
+  cursor: pointer;
+}
+
+@media (min-width: 440px) {
+  .button {
+    font-size: 2rem;
+  }
+}

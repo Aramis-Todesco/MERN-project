@@ -1,0 +1,32 @@
+.no-books-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(78, 74, 74, 0.8);
+  padding-block: 1rem;
+}
+
+.no-books-paragraph {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  padding: 1rem;
+  color: #fff;
+}
+
+.link {
+  background-color: #e27d60;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  color: #f7f7f7;
+  padding: 1rem;
+  font-size: 2rem;
+  transition: all 0.7s;
+}
+
+.link:hover {
+  background-color: #f7f7f7;
+  color: #e27d60;
+  border: 1px solid #e27d60;
+}

@@ -1,0 +1,33 @@
+.password-toggle {
+  position: absolute;
+  right: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.2rem;
+  color: gray;
+  transition: color 0.3s;
+}
+
+.password-toggle:hover {
+  color: darkgray;
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  padding: 0;
+}
+
+.eye-icon {
+  color: gray;
+}
+
+.eye-icon > svg {
+  width: 13px;
+}
+
+input:focus + .password-toggle .eye-icon > svg {
+  width: 2rem;
+}

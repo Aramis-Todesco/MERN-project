@@ -1,0 +1,16 @@
+.terms-main {
+  display: flex;
+  justify-content: center;
+}
+
+.terms-conditions-wrapper {
+  background-color: #f7f7f7;
+  width: 85%;
+  text-align: center;
+  margin-block: 5rem;
+  padding: 1rem;
+}
+
+.terms-conditions-wrapper > div > p {
+  font-size: 12px;
+}

@@ -1,0 +1,30 @@
+.form-container {
+  background-image: url(../../register.svg);
+  background-size: cover;
+  width: 75%;
+  border-radius: 15px;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .form-container {
+    width: 100%;
+    background-image: url(../../register4.svg);
+    background-position: bottom;
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1920px) {
+}

@@ -1,0 +1,28 @@
+.create-book-container {
+  background-image: url(../../new-book.svg);
+  background-size: cover;
+  border-radius: 15px;
+  border: 1px solid #fff;
+  color: white;
+  width: 90%;
+  padding-block: 2rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 630px) {
+  .create-book-container {
+    width: 100%;
+    border-radius: 0;
+    border-inline: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .create-book-container {
+    background-position: center;
+  }
+}

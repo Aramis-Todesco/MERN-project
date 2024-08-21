@@ -1,0 +1,11 @@
+export { default as Home } from "./Home/Home";
+export { default as Login } from "./Login/Login";
+export { default as Register } from "./Register/Register";
+export { default as MyBooks } from "./MyBooks/MyBooks";
+export { default as UpdateBook } from "./UpdateBook/UpdateBook";
+export { default as MyBook } from "./MyBook/MyBook";
+export { default as Logout } from "./Logout/Logout";
+export { default as CreateBook } from "./CreateBook/CreateBook";
+export { default as NoToken } from "./NoToken/NoToken.jsx";
+export { default as TermsConditions } from "./TermsConditions/TermsConditions.jsx";
+export { default as Copyright } from "./Copyright/Copyright.jsx";

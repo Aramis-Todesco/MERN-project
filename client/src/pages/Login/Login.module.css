@@ -1,0 +1,22 @@
+.form-container {
+  background-image: url(../../login.svg);
+  background-size: cover;
+  background-position-y: bottom;
+  width: 90%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: 1px solid #fff;
+}
+
+@media (min-width: 768px) {
+  .form-container {
+    width: 100%;
+    background-image: url(../../login2.svg);
+    background-position: bottom;
+    border-radius: 0;
+  }
+}
