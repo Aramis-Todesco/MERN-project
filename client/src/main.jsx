@@ -20,6 +20,8 @@ import {
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import { ScrollProvider } from "./context/ScrollContext.jsx";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,13 +43,13 @@ const router = createBrowserRouter([
         path: "/books",
         element: <ProtectedRoute element={<MyBooks />} />,
         loader: () =>
-          fetch("http://localhost:5000/api/books", { credentials: "include" }),
+          fetch(`${backendUrl}/api/books`, { credentials: "include" }),
       },
       {
         path: "/books/:id",
         element: <ProtectedRoute element={<MyBook />} />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/books/${params.id}`, {
+          fetch(`${backendUrl}/api/books/${params.id}`, {
             credentials: "include",
           }),
       },
@@ -55,7 +57,7 @@ const router = createBrowserRouter([
         path: "/create-book",
         element: <ProtectedRoute element={<CreateBook />} />,
         loader: () =>
-          fetch("http://localhost:5000/api/books/create-book", {
+          fetch(`${backendUrl}/api/books/create-book`, {
             credentials: "include",
           }),
       },
@@ -63,7 +65,7 @@ const router = createBrowserRouter([
         path: "/update/:id",
         element: <ProtectedRoute element={<UpdateBook />} />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/books/${params.id}`, {
+          fetch(`${backendUrl}/api/books/${params.id}`, {
             credentials: "include",
           }),
       },

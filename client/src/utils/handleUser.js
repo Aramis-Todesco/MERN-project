@@ -1,3 +1,5 @@
+const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
 export const handleSubmit = (e, setErrorMsg, setRedirectUrl) => {
   console.log("Evento:", e);
   console.log("Tipo di evento:", e.type);
@@ -10,7 +12,7 @@ export const handleSubmit = (e, setErrorMsg, setRedirectUrl) => {
 
   const user = { username, email, password, privacy };
 
-  fetch("http://localhost:5000/api/users/register", {
+  fetch(`${backendUrl}/api/users/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -38,7 +40,7 @@ export const handleLogin = (e, setIsLogged, setErrorMsg, setRedirectUrl) => {
 
   const user = { email, password };
 
-  fetch("http://localhost:5000/api/users/login", {
+  fetch(`${backendUrl}/api/users/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

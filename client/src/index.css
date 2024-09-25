@@ -13,6 +13,7 @@
   --light-orange: #e27d60;
   --light-gray: #d3d3d3;
   --dark-gray: #4a4a4a;
+  --white: #fff;
 }
 
 @media (min-width: 344px) {
@@ -52,8 +53,8 @@
 }
 
 ::selection {
-  background-color: #e27d60;
-  color: #f7f7f7;
+  background-color: var(--light-orange);
+  color: var(--light-gray);
 }
 
 /* Stile specifico per Chrome, Safari ed Edge */
@@ -101,7 +102,7 @@ body::before {
 a {
   text-decoration: none;
   text-align: center;
-  color: #d3d3d3;
+  color: var(--light-gray);
   transition: color 0.7s;
 }
 
@@ -171,11 +172,9 @@ a {
   }
 }
 
-@media (min-width: 992px) {
-}
-
-@media (min-width: 1200px) {
-}
-
-@media (min-width: 1920px) {
+@media (min-width: 920px) {
+  input,
+  textarea {
+    font-size: 0.7rem;
+  }
 }

@@ -70,6 +70,7 @@ usersRoute.post("/login", async (req, res) => {
         maxAge: 24 * 60 * 60 * 1000,
         httpOnly: true,
         secure: false,
+        sameSite: "lax", // Allow cookies to be sent on same-site requests
       });
       console.log("Login successful");
       console.log(token);

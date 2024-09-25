@@ -1,3 +1,5 @@
+const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
 export const handleCreateBook = async (e, state, dispatch) => {
   e.preventDefault();
   const form = e.target;
@@ -17,7 +19,7 @@ export const handleCreateBook = async (e, state, dispatch) => {
 
   // Invio dei dati del libro e dell'immagine
   try {
-    const response = await fetch("http://localhost:5000/api/books", {
+    const response = await fetch(`${backendUrl}/api/books`, {
       method: "POST",
       body: formData,
       credentials: "include",
@@ -41,7 +43,7 @@ export const handleDeleteBook = (books, setBooks, _id) => {
   const updatedBooks = books.filter((book) => book._id !== _id);
   setBooks(updatedBooks);
 
-  fetch(`http://localhost:5000/api/books/${_id}`, {
+  fetch(`${backendUrl}/api/books/${_id}`, {
     method: "DELETE",
     credentials: "include",
   })
@@ -127,7 +129,7 @@ export const handleUpdateBook = (
     formData.append("images", image);
   });
 
-  fetch(`http://localhost:5000/api/books/${_id}`, {
+  fetch(`${backendUrl}/api/books/${_id}`, {
     method: "PUT",
     body: formData,
     credentials: "include",

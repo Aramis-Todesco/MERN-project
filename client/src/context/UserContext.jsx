@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
 const UserContext = createContext({
   isLogged: false,
   setIsLogged: () => {},
@@ -13,7 +14,7 @@ export function UserProvider({ children }) {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/users/check-auth", {
+    fetch(`${backendUrl}/api/users/check-auth`, {
       credentials: "include",
     })
       .then((res) => res.json())

@@ -1,3 +1,5 @@
+const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
 export const handleRemoveNewImage = (index, state, dispatch) => {
   const updatedPreviews = state.newImagePreviews.filter((_, i) => i !== index);
   const updatedImages = state.selectedImages.filter((_, i) => i !== index);
@@ -39,7 +41,7 @@ export const handleRemoveExistingImage = (imageId, state, dispatch, _id) => {
 
   dispatch({ type: "SET_EXISTING_IMAGES", payload: updatedImages });
 
-  fetch(`http://localhost:5000/api/images/${_id}`, {
+  fetch(`${backendUrl}/api/images/${_id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",

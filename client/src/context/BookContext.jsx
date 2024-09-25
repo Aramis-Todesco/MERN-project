@@ -1,6 +1,9 @@
 // src/context/BooksContext.jsx
-import { createContext, useState, useEffect, useContext } from "react";
 
+import { createContext, useState, useEffect, useContext } from "react";
+import PropTypes from "prop-types";
+
+const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
 const BooksContext = createContext({
   books: [],
   loading: true,
@@ -15,7 +18,7 @@ const BooksProvider = ({ children }) => {
 
   const fetchBooks = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/books", {
+      const response = await fetch(`${backendUrl}/api/books`, {
         credentials: "include",
       });
       if (!response.ok) {
@@ -43,6 +46,10 @@ const BooksProvider = ({ children }) => {
 
 const useBooks = () => {
   return useContext(BooksContext);
+};
+
+BooksProvider.propTypes = {
+  children: PropTypes.node,
 };
 
 export { BooksProvider, useBooks };

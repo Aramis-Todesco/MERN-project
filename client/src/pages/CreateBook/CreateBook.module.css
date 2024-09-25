@@ -2,8 +2,8 @@
   background-image: url(../../new-book.svg);
   background-size: cover;
   border-radius: 15px;
-  border: 1px solid #fff;
-  color: white;
+  border: 1px solid var(--white);
+  color: var(--white);
   width: 90%;
   padding-block: 2rem;
   border-radius: 15px;

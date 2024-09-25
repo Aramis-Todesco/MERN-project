@@ -55,12 +55,8 @@
 }
 
 @media (min-width: 992px) {
-  .home-container {
-    width: 100%;
-  }
   .home-wrapper {
     background-position: bottom;
-    border-radius: 0;
   }
   .link {
     font-size: 2rem;
